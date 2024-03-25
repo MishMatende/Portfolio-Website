@@ -1,0 +1,128 @@
+html {
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+#main-content {
+  background-color: #ffffff;
+}
+
+/* Section ONE Header  */
+a {
+  font-style: normal;
+  color: black;
+  text-decoration: none;
+  font-weight: 700;
+  margin-left: 1.5rem;
+}
+
+.nav-main-container {
+  display: flex;
+}
+
+.portfolio-name {
+  /* background-color: black; */
+  width: 60%;
+}
+
+.nav-container {
+  /* border: 2px solid red; */
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 1.2rem;
+}
+
+/* Section TWO Introduction  */
+.main-body-container {
+  border: 2px solid red;
+}
+
+.introduction-container,
+.ReachOut-container,
+.contact-container {
+  border: 2px solid black;
+  margin-top: 15%;
+  margin-left: 20%;
+  margin-right: 20%;
+  display: flex;
+}
+
+.description-container {
+  width: 50%;
+}
+
+.description-container > p {
+  margin-left: 4%;
+}
+
+.portrait-container {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  border: 2px solid yellow;
+}
+
+.portrait-container > img {
+  border: solid 3px black;
+  border-radius: 50%;
+}
+
+#first-line {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+/* Section THREE Links  */
+.ReachOut-container {
+  border: 2px solid greenyellow;
+  margin-top: 2%;
+  justify-content: center;
+}
+
+/* Section FOUR About Me */
+.about-container {
+  border: 2px solid black;
+  margin-top: 10%;
+  margin-left: 15%;
+  margin-right: 15%;
+  display: flex;
+  flex-direction: column;
+  padding: 1%;
+}
+
+.aboutDetails-container {
+  border: 2px solid red;
+  display: flex;
+}
+
+.about-container h2 {
+  align-self: center;
+}
+
+.aboutDetails-container > img {
+  margin: 2%;
+}
+
+.aboutDetails-container > p {
+  width: 75%;
+  border: 2px solid black;
+}
+
+/* Section FIVE Projects  */
+
+/* Section SIX Contact  */
+.contact-container {
+  font-weight: 700;
+  justify-content: center;
+  margin-bottom: 15%;
+}
