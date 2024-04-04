@@ -130,8 +130,8 @@ a {
   margin-bottom: 15%;
 }
 
-/* Breakpoint for Mobile devices */
-@media (max-width: 576px) {
+/* Breakpoint for Mobile and Tablet devices */
+@media (max-width: 768px) {
   .introduction-container {
     flex-direction: column;
     margin-left: 0;
@@ -190,7 +190,7 @@ a {
 
   .aboutDetails-container > p {
     width: auto;
-    margin: 3% 0 3% 0;
+    margin: 3% 0.5% 3% 0;
     text-align: center;
   }
 
