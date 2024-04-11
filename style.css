@@ -26,6 +26,8 @@ a {
 
 .nav-main-container {
   display: flex;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .portfolio-name {
@@ -86,7 +88,7 @@ a {
 
 /* Section THREE Links  */
 .ReachOut-container {
-  border: 2px solid greenyellow;
+  /* border: 2px solid greenyellow; */
   margin-top: 2%;
   justify-content: center;
   text-align: center;
@@ -118,6 +120,7 @@ a {
 
 .aboutDetails-container > p {
   width: 75%;
+  align-self: center;
   /* border: 2px solid black; */
 }
 
@@ -136,6 +139,11 @@ a {
     flex-direction: column;
     margin-left: 0;
     margin-right: 0;
+  }
+
+  .nav-main-container {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .portrait-container {
@@ -198,4 +206,9 @@ a {
     margin-left: 15%;
     margin-right: 15%;
   }
+}
+
+/* Breakpoint for Mobile Devices */
+/* Adding a hamburger button */
+@media (max-width: 576px) {
 }
