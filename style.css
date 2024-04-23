@@ -15,13 +15,14 @@ html {
   background-color: #ffffff;
 }
 
-/* Section ONE Header  */
+/* .........................................Section ONE Header............................................  */
 a {
   font-style: normal;
   color: black;
   text-decoration: none;
   font-weight: 700;
   margin-left: 1.5rem;
+  font-size: 20px;
 }
 
 .nav-main-container {
@@ -35,16 +36,63 @@ a {
   width: 60%;
 }
 
+.portfolio-name h2 {
+  position: relative;
+  font-size: 40px;
+}
+
+.portfolio-name > h2 > span {
+  color: #ff004f;
+}
+
+.portfolio-name h2::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #ff004f;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+
+.portfolio-name h2:hover::after {
+  width: 20%;
+}
+
 .nav-container {
   /* border: 2px solid red; */
   width: 40%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-right: 1.2rem;
 }
 
-/* Section TWO Introduction  */
+.nav-container li {
+  list-style: none;
+  margin: 10px 20px;
+}
+
+.nav-container li a {
+  position: relative;
+}
+
+.nav-container li a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #ff004f;
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  transition: 0.5s;
+}
+
+.nav-container li a:hover::after {
+  width: 100%;
+}
+
+/* ...................................Section TWO Introduction..................................  */
 .main-body-container {
   /* border: 2px solid red; */
   margin: 0;
@@ -63,10 +111,23 @@ a {
 .description-container {
   width: 50%;
   /* border: 2px solid black; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.description-container > #first-line {
+  font-size: 30px;
+}
+
+.description-container > #first-line > span {
+  color: #ff004f;
+  font-size: 35px;
 }
 
 .description-container > p {
   margin-left: 4%;
+  font-size: 20px;
 }
 
 .portrait-container {
@@ -77,6 +138,7 @@ a {
 }
 
 .portrait-container > img {
+  height: 450px;
   border: solid 3px black;
   border-radius: 50%;
 }
@@ -86,7 +148,7 @@ a {
   font-size: 1.2rem;
 }
 
-/* Section THREE Links  */
+/* ........................Section THREE Links..........................  */
 .ReachOut-container {
   /* border: 2px solid greenyellow; */
   margin-top: 2%;
@@ -94,7 +156,11 @@ a {
   text-align: center;
 }
 
-/* Section FOUR About Me */
+.ReachOut-container > p {
+  font-size: 20px;
+}
+
+/* .........................Section FOUR About Me...................... */
 .about-container {
   /* border: 2px solid black; */
   margin-top: 10%;
@@ -108,25 +174,91 @@ a {
 .aboutDetails-container {
   /* border: 2px solid red; */
   display: flex;
+  justify-content: space-between;
 }
 
 .about-container h2 {
   align-self: center;
+  font-size: 30px;
 }
 
-.aboutDetails-container > img {
+.aboutimage {
+  flex-basis: 40%;
+}
+
+.aboutDescription {
+  flex-basis: 70%;
+}
+
+.aboutDetails-container > div > img {
   margin: 2%;
+  height: 600px;
+  border-radius: 20px;
 }
 
-.aboutDetails-container > p {
-  width: 75%;
-  align-self: center;
+.aboutDescription > p {
+  font-size: 20px;
   /* border: 2px solid black; */
 }
 
-/* Section FIVE Projects  */
+.aboutDescription > p span {
+  color: #ff004f;
+  font-weight: 700;
+}
 
-/* Section SIX Contact  */
+.tab-titles {
+  font-size: 20px;
+  display: flex;
+  margin: 20px 0 10px;
+}
+
+.tab-links {
+  margin-right: 50px;
+  font-weight: 700;
+  cursor: pointer;
+  position: relative;
+}
+
+.tab-links::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #ff004f;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+  width: 50%;
+}
+
+.tab-contents ul {
+  padding-left: 0;
+  margin-top: 0;
+}
+
+.tab-contents ul li {
+  list-style: none;
+  margin: 10px 0;
+}
+
+.tab-contents ul li span {
+  color: #b54769;
+  font-weight: 700;
+}
+
+.tab-contents {
+  display: none;
+}
+
+.tab-contents.active-tab {
+  display: block;
+}
+/* ............................Section FIVE Projects............................  */
+
+/* ...................................Section SIX Contact....................................  */
 .contact-container {
   font-weight: 700;
   justify-content: center;

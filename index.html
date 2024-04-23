@@ -14,25 +14,25 @@
   </head>
   <body>
     <div id="main-container">
+      <!-- ..........................NAVIGATION SECTION........................ -->
       <div class="nav-main-container">
         <div class="portfolio-name">
           <!-- Add 'Mishael.Dev' as the Portfolio name -->
-          <h2>Mishael.Dev</h2>
+          <h2>Mishael.<span>Dev</span></h2>
         </div>
-        <nav class="nav-container">
-          <a href="">
-            HOME
-            <!-- Add another link to a different destination -->
-          </a>
-          <a href="">ABOUT</a>
-          <a href="">CONTACT</a>
-        </nav>
+        <ul class="nav-container">
+          <li><a href="#">HOME</a></li>
+          <li><a href="">ABOUT</a></li>
+          <li><a href="">PROJECTS</a></li>
+          <li><a href="">CONTACT</a></li>
+        </ul>
       </div>
       <div class="main-body-container">
+        <!-- ...............................INTRODUCTION SECTION........................ -->
         <div class="introduction-container">
           <div class="description-container">
             <!-- Add a description of who you are -->
-            <p id="first-line">Hi! My name is Mishael.</p>
+            <p id="first-line">Hi! My name is <span>Mishael.</span></p>
             <p id="middle-line">
               I am a Full Stack Developer specializing in full stack JavaScript.
               I am passionate in coding and exploring Markup language.
@@ -41,10 +41,7 @@
           </div>
           <div class="portrait-container">
             <!-- Add your potrait image -->
-            <img
-              src="https://placehold.co/200x200?text=Portrait\nimage"
-              alt="Portrait image"
-            />
+            <img src="/images/Potrait image.jpg" alt="Portrait image" />
           </div>
         </div>
         <div class="ReachOut-container">
@@ -58,25 +55,85 @@
           <img src="" alt="" />
           <img src="" alt="" />
         </div>
+        <!-- .....................................ABOUT SECTION............................. -->
         <div class="about-container">
           <h2>About Me</h2>
           <div class="aboutDetails-container">
-            <img src="https://placehold.co/200x200?text=Random\nimage" alt="" />
-            <p>
-              As a dedicated Junior Full Stack Developer, I posses an impressive
-              arsenal of skills in HTML, CSS, JavaScript, PostgreSQL. I excel in
-              maintaining and developing Responsive web applications that
-              facilitate a user's smooth experience.
-            </p>
+            <div class="aboutImage">
+              <img src="images/Full potrait image.jpg" alt="" />
+            </div>
+            <div class="aboutDescription">
+              <p>
+                As a dedicated Junior Full Stack Developer, I posses an
+                impressive arsenal of skills in
+                <span>HTML, CSS, JavaScript, PostgreSQL.</span> I excel in
+                maintaining and developing Responsive web applications that
+                facilitate a user's smooth experience.
+              </p>
+              <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('skills')">
+                  Skills
+                </p>
+                <!-- <p class="tab-links">Experience</p> -->
+                <p class="tab-links" onclick="opentab('education')">
+                  Education
+                </p>
+              </div>
+              <div class="tab-contents active-tab" id="skills">
+                <ul>
+                  <li>
+                    <span>Web Design</span><br />Design Websites and Web
+                    Applications
+                  </li>
+                  <li>
+                    <span>Web Design</span><br />Design Websites and Web
+                    Applications
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-contents" id="education">
+                <ul>
+                  <li>
+                    <span>2024</span><br />
+                    Full stack Web development from Udemy
+                  </li>
+                  <li>
+                    <span>2024</span><br />
+                    BISF (Information Security and Forensics) from KCA
+                  </li>
+                  <li>
+                    <span>2021</span><br />Diploma in Information Technology
+                    from KCA
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
-        <!-- <div class="porjects-container">
-            Add Future Projects that will come to exist
-        </div> -->
+        <!-- ...........................................PROJECTS SECTION........................ -->
+        <div class="porjects-container" id="projects">
+          <!-- Add Future Projects that will come to exist -->
+        </div>
+        <!-- ................................................CONTACTS SECTION........................ -->
         <div class="contact-container">
           <p>Add details mentioned in Obsidian</p>
         </div>
       </div>
     </div>
+    <script>
+      let tablinks = document.getElementsByClassName("tab-links");
+      let tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname) {
+        for (tablink of tablinks) {
+          tablink.classList.remove("active-link");
+        }
+        for (tabcontent of tabcontents) {
+          tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+      }
+    </script>
   </body>
 </html>
