@@ -180,6 +180,7 @@ a {
 .about-container h2 {
   align-self: center;
   font-size: 30px;
+  color: #ff004f;
 }
 
 .aboutimage {
@@ -256,9 +257,68 @@ a {
 .tab-contents.active-tab {
   display: block;
 }
-/* ............................Section FIVE Projects............................  */
+/* ...................................Section FIVE Services............................  */
+#services {
+  /* border: 2px solid black; */
+  margin-top: 10%;
+  margin-left: 20%;
+  margin-right: 20%;
+  padding: 30px 0;
+}
 
-/* ...................................Section SIX Contact....................................  */
+.sub-title {
+  color: #ff004f;
+  text-align: center;
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 40px;
+  margin-top: 40px;
+}
+
+.services-list div {
+  background: black;
+  padding: 40px;
+  font-size: 13px;
+  font-weight: 400;
+  border-radius: 10px;
+  transition: background 0.5s, transform 0.5s;
+}
+
+.services-list div:hover {
+  background: #ff004f;
+  transform: translateY(-10px);
+}
+
+.services-list > div h2 {
+  margin: 0;
+  color: white;
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.services-list > div p,
+.services-list div i {
+  color: white;
+}
+
+.services-list > div i {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+.services-list > div a {
+  margin-left: 0;
+  color: #b54769;
+  font-weight: 500;
+}
+
+/* ....................................SECTION SIX Projects.................................. */
+
+/* ...................................Section SEVEN Contact....................................  */
 .contact-container {
   font-weight: 700;
   justify-content: center;
