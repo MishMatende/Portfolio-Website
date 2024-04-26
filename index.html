@@ -313,6 +313,12 @@
           </div>
         </div>
       </div>
+      <div class="copyright">
+        <p>
+          Copyright © <span id="copyright-span"></span>. Made by Mishael
+          Matende.
+        </p>
+      </div>
     </div>
     <script>
       let tablinks = document.getElementsByClassName("tab-links");
@@ -328,6 +334,10 @@
         event.currentTarget.classList.add("active-link");
         document.getElementById(tabname).classList.add("active-tab");
       }
+
+      const year = new Date().getFullYear();
+
+      document.getElementById("copyright-span").innerHTML = year;
     </script>
   </body>
 </html>

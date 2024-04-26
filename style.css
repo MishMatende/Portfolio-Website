@@ -512,6 +512,7 @@ ul {
   padding: 14px 50px;
   border-radius: 6px;
   transition: background 0.5s;
+  cursor: pointer;
 }
 
 .see-more-button:hover {
@@ -590,6 +591,9 @@ ul {
   margin-left: 0;
   margin-top: 10px;
   margin-bottom: 5px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: 500;
 }
 
 .btn:hover {
@@ -611,6 +615,17 @@ form textarea {
   color: black;
   font-size: 20px;
   border-radius: 6px;
+}
+
+.copyright {
+  text-align: center;
+  margin-bottom: 5%;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.copyright span {
+  color: #ff004f;
 }
 
 /* ...................................................Breakpoint for Mobile and Tablet devices............................................................. */
