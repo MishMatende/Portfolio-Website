@@ -26,15 +26,15 @@
         </div>
         <ul class="nav-container">
           <li><a href="#">HOME</a></li>
-          <li><a href="">ABOUT</a></li>
-          <li><a href="">SERVICES</a></li>
-          <li><a href="">PROJECTS</a></li>
-          <li><a href="">CONTACT</a></li>
+          <li><a href="#">ABOUT</a></li>
+          <li><a href="#">SERVICES</a></li>
+          <li><a href="#">PROJECTS</a></li>
+          <li><a href="#">CONTACT</a></li>
         </ul>
       </div>
       <div class="main-body-container">
         <!-- ...............................INTRODUCTION SECTION........................ -->
-        <div class="introduction-container">
+        <div class="introduction-container" id="home">
           <div class="description-container">
             <!-- Add a description of who you are -->
             <p id="first-line">Hi! My name is <span>Mishael.</span></p>
@@ -51,17 +51,16 @@
         </div>
         <div class="ReachOut-container">
           <p>I'd love to hear from you.</p>
-          <a class="linkedIn" href=""></a>
-          <a class="github" href=""></a>
         </div>
-        <div class="techStack-container">
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
+        <div class="techstack-container">
+          <a href="https://github.com/MishMatende"
+            ><i class="fa-brands fa-github"></i
+          ></a>
+          <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#"><i class="fa-regular fa-envelope"></i></a>
         </div>
         <!-- .....................................ABOUT SECTION............................. -->
-        <div class="about-container">
+        <div class="about-container" id="about">
           <h2>About Me</h2>
           <div class="aboutDetails-container">
             <div class="aboutImage">
@@ -84,7 +83,8 @@
                   Education
                 </p>
               </div>
-              <div class="tab-contents active-tab" id="skills">
+
+              <!-- <div class="tab-contents active-tab" >
                 <ul>
                   <li>
                     <span>Web Design</span><br />Design Websites and Web
@@ -95,6 +95,60 @@
                     Applications
                   </li>
                 </ul>
+              </div> -->
+              <div class="main tab-contents active-tab" id="skills">
+                <section class="skill content-card">
+                  <ul class="skills-list">
+                    <li class="skills-item">
+                      <div class="title-wrapper">
+                        <h3>React Js</h3>
+                        <data value="60">60%</data>
+                      </div>
+                      <div class="skill-progress-bg">
+                        <div
+                          class="skill-progress-fill"
+                          style="width: 60%"
+                        ></div>
+                      </div>
+                    </li>
+                    <li class="skills-item">
+                      <div class="title-wrapper">
+                        <h3>Html</h3>
+                        <data value="90">90%</data>
+                      </div>
+                      <div class="skill-progress-bg">
+                        <div
+                          class="skill-progress-fill"
+                          style="width: 90%"
+                        ></div>
+                      </div>
+                    </li>
+                    <li class="skills-item">
+                      <div class="title-wrapper">
+                        <h3>CSS</h3>
+                        <data value="70">70%</data>
+                      </div>
+                      <div class="skill-progress-bg">
+                        <div
+                          class="skill-progress-fill"
+                          style="width: 70%"
+                        ></div>
+                      </div>
+                    </li>
+                    <li class="skills-item">
+                      <div class="title-wrapper">
+                        <h3>JAVASCRIPT</h3>
+                        <data value="60">60%</data>
+                      </div>
+                      <div class="skill-progress-bg">
+                        <div
+                          class="skill-progress-fill"
+                          style="width: 60%"
+                        ></div>
+                      </div>
+                    </li>
+                  </ul>
+                </section>
               </div>
               <div class="tab-contents" id="education">
                 <ul>
@@ -152,10 +206,111 @@
         </div>
 
         <!-- ................................................PROJECTS SECTION...................... -->
-
+        <div id="projects">
+          <div class="container">
+            <h1 class="sub-title">Projects</h1>
+            <div class="project-list">
+              <div class="project">
+                <img src="https://placehold.co/400" alt="" />
+                <div class="layer">
+                  <h3>E-commerce Web App</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. sed
+                    nulla nibh, tincidunt sit amet sapien quis.
+                  </p>
+                  <a href="#"
+                    ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="project">
+                <img src="https://placehold.co/400" alt="" />
+                <div class="layer">
+                  <h3>E-commerce Web App</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. sed
+                    nulla nibh, tincidunt sit amet sapien quis.
+                  </p>
+                  <a href="#"
+                    ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                  ></a>
+                </div>
+              </div>
+              <div class="project">
+                <img src="https://placehold.co/400" alt="" />
+                <div class="layer">
+                  <h3>E-commerce Web App</h3>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. sed
+                    nulla nibh, tincidunt sit amet sapien quis.
+                  </p>
+                  <a href="#"
+                    ><i class="fa-solid fa-arrow-up-right-from-square"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <!-- <a href="" class="see-more-button">See more</a> -->
+          </div>
+        </div>
         <!-- ................................................CONTACTS SECTION........................ -->
-        <div class="contact-container">
-          <p>Add details mentioned in Obsidian</p>
+        <div class="contact-container" id="contact">
+          <div class="container">
+            <div class="row">
+              <div class="contact-left">
+                <h1 class="contact-sub-title">Contact Me</h1>
+                <p>
+                  <i class="fa-regular fa-envelope"></i>
+                  mishaelmatende@gmail.com
+                </p>
+                <p>
+                  <i class="fa-solid fa-phone"></i>
+                  <i class="fa-brands fa-whatsapp"></i> +254 708076388
+                </p>
+                <div class="social-icons">
+                  <a href="https://github.com/MishMatende"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                  <a href="https://www.instagram.com/_m.atend.e_/"
+                    ><i class="fa-brands fa-instagram"></i
+                  ></a>
+                  <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                </div>
+                <div class="document-container">
+                  <a href="#" class="see-more-button btn" download
+                    >Download CV</a
+                  >
+                  <a href="#" class="see-more-button btn" download
+                    >Download Resume</a
+                  >
+                </div>
+              </div>
+              <div class="contact-right">
+                <form>
+                  <input
+                    type="text"
+                    name="Name"
+                    placeholder="Your Name"
+                    required
+                  />
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Your Email"
+                    required
+                  />
+                  <textarea
+                    name="Message"
+                    rows="6"
+                    placeholder="Your Message"
+                  ></textarea>
+                  <button type="submit" class="see-more-button btn">
+                    Submit <i class="fa-solid fa-paper-plane"></i>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
