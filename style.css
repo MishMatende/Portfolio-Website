@@ -658,8 +658,48 @@ form textarea {
   display: block;
 }
 
+/* ............................TRIAL BREAKPOINT............................. */
+@media (max-width: 1600px) {
+  .introduction-container,
+  .ReachOut-container,
+  .techstack-container,
+  .about-container,
+  #services,
+  #projects,
+  #contact {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
+@media (max-width: 1400px) {
+  .introduction-container,
+  .ReachOut-container,
+  .techstack-container,
+  .about-container,
+  #services,
+  #projects,
+  #contact {
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .introduction-container,
+  .ReachOut-container,
+  .techstack-container,
+  .about-container,
+  #services,
+  #projects,
+  #contact {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
 /* ...................................................Breakpoint for Mobile and Tablet devices............................................................. */
-@media only screen and (max-width: 768px) {
+@media (max-width: 900px) {
   /* .......................................NAVIGATION SECTION......................................... */
   .nav-main-container {
     padding-left: 2%;
@@ -873,9 +913,4 @@ form textarea {
     cursor: pointer;
     margin-bottom: 10px;
   }
-}
-
-/* Breakpoint for Mobile Devices */
-/* Adding a hamburger button */
-@media (max-width: 576px) {
 }
