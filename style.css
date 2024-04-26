@@ -3,6 +3,7 @@ html {
   font-family: "Space Mono", monospace;
   font-weight: 400;
   font-style: normal;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -29,11 +30,12 @@ a {
   display: flex;
   padding-left: 5%;
   padding-right: 5%;
+  align-items: center;
 }
 
 .portfolio-name {
   /* background-color: black; */
-  width: 60%;
+  flex-basis: 50%;
 }
 
 .portfolio-name h2 {
@@ -62,10 +64,15 @@ a {
 
 .nav-container {
   /* border: 2px solid red; */
-  width: 40%;
+  flex-basis: 50%;
   display: flex;
+  flex-direction: row;
   justify-content: flex-end;
   align-items: center;
+}
+
+.nav-container ul {
+  display: flex;
 }
 
 .nav-container li {
@@ -168,6 +175,15 @@ a {
 
 .techstack-container i {
   font-size: 30px;
+  color: black;
+  margin-right: 15px;
+  display: inline-block;
+  transition: transform 0.5s;
+}
+
+.techstack-container i:hover {
+  color: #ff004f;
+  transform: translateY(-5px);
 }
 
 /* .........................Section FOUR About Me...................... */
@@ -314,7 +330,7 @@ a {
 
 .content-card {
   padding: 20px;
-  padding-top: 00px;
+  padding-top: 0px;
   padding-bottom: 0px;
 }
 
@@ -628,17 +644,37 @@ form textarea {
   color: #ff004f;
 }
 
+.mobile-contact-subtitle {
+  display: none;
+}
+
+.nav-container .fa-xmark,
+.nav-main-container .fa-bars {
+  display: none;
+}
+
+#msg {
+  color: blue;
+  display: block;
+}
+
 /* ...................................................Breakpoint for Mobile and Tablet devices............................................................. */
-@media (max-width: 768px) {
+@media only screen and (max-width: 768px) {
+  /* .......................................NAVIGATION SECTION......................................... */
+  .nav-main-container {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  .portfolio-name h2 {
+    font-size: 30px;
+  }
+
+  /* .....................................INTRODUCTION SECTION.................................... */
   .introduction-container {
     flex-direction: column;
     margin-left: 0;
     margin-right: 0;
-  }
-
-  .nav-main-container {
-    padding-left: 0;
-    padding-right: 0;
   }
 
   .portrait-container {
@@ -647,17 +683,14 @@ form textarea {
     margin-top: 5%;
   }
 
+  .portrait-container > img {
+    height: 300px;
+  }
+
   .description-container {
     width: auto;
     margin: 5% 0 5% 0;
     padding: 0;
-  }
-
-  .ReachOut-container {
-    margin-top: 4%;
-    margin-left: 10%;
-    margin-right: 10%;
-    padding-left: 2%;
   }
 
   .description-container > p {
@@ -673,6 +706,19 @@ form textarea {
     text-align: center;
   }
 
+  .ReachOut-container {
+    margin-top: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding-left: 2%;
+    margin-top: 0;
+  }
+
+  .ReachOut-container p {
+    margin-top: 0;
+  }
+
+  /* ........................................ABOUT SECTION.................................. */
   .about-container {
     width: auto;
     margin: 0;
@@ -684,22 +730,148 @@ form textarea {
     flex-direction: column;
   }
 
-  .aboutDetails-container > img {
-    height: 300px;
-    width: 300px;
-    border-radius: 10%;
-    align-self: center;
-  }
-
   .aboutDetails-container > p {
     width: auto;
     margin: 3% 0.5% 3% 0;
     text-align: center;
   }
 
+  .aboutImage {
+    display: flex;
+    justify-content: center;
+  }
+
+  .aboutDescription p {
+    text-align: center;
+    margin-left: 2px;
+    margin-right: 2px;
+    font-size: 16px;
+  }
+
+  .tab-titles {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .tab-links.active-link::after {
+    width: 100%;
+  }
+
+  /* .............................SKILLS SECTION...................... */
+
+  .main {
+    width: 100%;
+    position: relative;
+    top: 200px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-right: 5px;
+  }
+
+  /* .................................SERVICE SECTION..................... */
+  #services {
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  /* .................................CONTACT SECTION..................................... */
   .contact-container {
     margin-left: 15%;
     margin-right: 15%;
+    margin-bottom: 5%;
+  }
+
+  .contact-sub-title {
+    display: none;
+  }
+
+  .mobile-contact-subtitle {
+    display: inline-block;
+    text-align: center;
+  }
+
+  .row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-left,
+  .contact-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+  }
+
+  .contact-right form {
+    text-align: center;
+  }
+
+  .see-more-button {
+    display: inline-block;
+    font-weight: 700;
+    align-self: center;
+    margin-right: 5px;
+    text-align: center;
+  }
+
+  .contact-left {
+    order: 1;
+    margin-top: 10px;
+  }
+
+  .contact-left .phone {
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+
+  .copyright,
+  .row p {
+    font-size: 16px;
+  }
+
+  .nav-container .fa-xmark,
+  .nav-main-container .fa-bars {
+    display: block;
+    font-size: 30px;
+  }
+
+  .nav-container ul {
+    background-color: #ff004f;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+    padding-left: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 0;
+    font-size: 30px;
+    transition: right 0.5s;
+  }
+
+  .nav-container ul li,
+  .nav-container ul .fa-xmark {
+    display: block;
+    margin: 15px;
+  }
+
+  .nav-container ul .fa-xmark {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+    margin-bottom: 10px;
   }
 }
 
