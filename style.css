@@ -402,11 +402,16 @@ ul {
   text-align: center;
 }
 
-.services-list {
+/* .services-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 40px;
   margin-top: 40px;
+} */
+
+.services-list {
+  display: flex;
+  justify-content: center;
 }
 
 .services-list div {
@@ -415,7 +420,10 @@ ul {
   font-size: 13px;
   font-weight: 400;
   border-radius: 10px;
+  width: 50%;
   transition: background 0.5s, transform 0.5s;
+  margin-left: 100px;
+  margin-top: 50px;
 }
 
 .services-list div:hover {
@@ -818,6 +826,16 @@ form textarea {
     margin-right: 5%;
   }
 
+  .services-list {
+    flex-direction: column;
+  }
+
+  .services-list div {
+    width: auto;
+    margin-top: 100px;
+    margin-left: 0;
+  }
+
   /* .................................CONTACT SECTION..................................... */
   .contact-container {
     margin-left: 15%;
@@ -913,4 +931,8 @@ form textarea {
     cursor: pointer;
     margin-bottom: 10px;
   }
+}
+
+#projects {
+  display: none;
 }
