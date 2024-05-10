@@ -936,3 +936,7 @@ form textarea {
 #projects {
   display: none;
 }
+
+#cv-button {
+  display:none;
+}
